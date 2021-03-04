@@ -1,0 +1,9 @@
+// pc端APP模拟样式
+.pc-widget {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &-label{
+    min-width: 60px;
+  }
+}

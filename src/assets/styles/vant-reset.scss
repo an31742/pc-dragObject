@@ -1,0 +1,16 @@
+// 对于vant的自定义样式修改
+
+// 单选框间隔
+.van-radio + .van-radio {
+  margin-top: 5px;
+}
+
+// 复选框间距
+.van-checkbox + .van-checkbox {
+  margin-top: 5px;
+}
+
+// 表单组间隔
+.van-cell-group + .van-cell-group {
+  margin-top: 10px;
+}
