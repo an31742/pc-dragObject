@@ -7,7 +7,7 @@
           <base-drag-tools />
         </el-collapse-item>
         <el-collapse-item title="业务控件" name="2">
-          <!-- <business-drag-tools /> -->
+          <business-drag-tools />
         </el-collapse-item>
         <el-collapse-item title="布局控件" name="3">
           <layout-drag-tools />
@@ -29,8 +29,12 @@
                 <div v-for="(tr,trIndex) in item.children" :key="trIndex">
                   <div v-for="(td,tdIndex) in tr.rowCells" :key='tdIndex'>
                     <div v-if="tr.rowIndex + '|' + td.colIndex === props.data" @click="getActiveIndex(tr,td,index)">
-                      <draggable style="height:60px;" :list="td.component"
-                        :group="td.component.length === 0 ?'widget':'no'" @change="handleChange(tr.rowIndex,td.colIndex,index)" :draggable="false">
+                      <draggable
+                      style="height:60px;"
+                      :list="td.component"
+                        :group="td.component.length === 0 ?'widget':'no'"
+                        @change="handleChange(tr.rowIndex,td.colIndex,index)"
+                        :draggable="false">
                         <div :class="['list-group-item', { 'is-actived': activeLayoutIndex === index &&activeIndex === props.data } ]"
                           v-for="(e, i) in td.component" :key="i">
                           <component  style="width:100%" v-bind:is="e.type" :ref="'widget' + i" :payload="e.payload" ></component>

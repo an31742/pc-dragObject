@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'PCDrag',
       component: () => import('./views/PcDrag')
+    },
+    {
+      path: '/pic',
+      name: 'Pic',
+      component: () => import('./views/PcDrag/pic')
     }
   ]
 })
