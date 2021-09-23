@@ -2,7 +2,7 @@
   <div class="drag">
     <!-- 左侧组件区域 -->
     <div class="drag-left">
-      1111
+      111112
       <el-collapse v-model="activeNames" accordion>
         <el-collapse-item title="基础控件" name="1">
           <base-drag-tools />
